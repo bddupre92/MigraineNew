@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-04-19 23:23:10",
+  "optimization_time_seconds": 1245.32,
+  "training_time_seconds": 876.45,
+  "expert_configs": [
+    {
+      "conv_filters": 64,
+      "kernel_size": 5,
+      "lstm_units": 128,
+      "dropout_rate": 0.3,
+      "output_dim": 64
+    },
+    {
+      "hidden_units": 128,
+      "activation": "elu",
+      "dropout_rate": 0.25,
+      "output_dim": 64
+    },
+    {
+      "embedding_dim": 64,
+      "num_heads": 4,
+      "transformer_dim": 96,
+      "dropout_rate": 0.2,
+      "output_dim": 64
+    },
+    {
+      "hidden_units": 96,
+      "activation": "relu",
+      "dropout_rate": 0.3,
+      "output_dim": 64
+    }
+  ],
+  "gating_config": {
+    "gate_hidden_size": 128,
+    "gate_top_k": 2,
+    "load_balance_coef": 0.05
+  },
+  "e2e_config": {
+    "learning_rate": 0.0025,
+    "batch_size": 64,
+    "l2_regularization": 0.01
+  },
+  "final_performance": {
+    "accuracy": 0.9425,
+    "precision": 0.8571,
+    "recall": 0.8750,
+    "f1": 0.8659,
+    "auc": 0.9325,
+    "specificity": 0.9524,
+    "npv": 0.9677,
+    "threshold": 0.4235
+  },
+  "improvement": {
+    "auc_improvement": 0.3720,
+    "f1_improvement": 0.7918,
+    "precision_improvement": 0.8571,
+    "recall_improvement": 0.8750,
+    "accuracy_improvement": 0.0025
+  },
+  "optimization_phases": {
+    "expert_phase": {
+      "sleep": {
+        "config": {
+          "conv_filters": 64,
+          "kernel_size": 5,
+          "lstm_units": 128,
+          "dropout_rate": 0.3,
+          "output_dim": 64
+        },
+        "fitness": 0.7825,
+        "iterations": 15,
+        "algorithm": "de",
+        "population_size": 5,
+        "generations": 3,
+        "convergence": {
+          "initial_fitness": 0.5214,
+          "final_fitness": 0.7825,
+          "improvement": 0.2611
+        }
+      },
+      "weather": {
+        "config": {
+          "hidden_units": 128,
+          "activation": "elu",
+          "dropout_rate": 0.25,
+          "output_dim": 64
+        },
+        "fitness": 0.6932,
+        "iterations": 15,
+        "algorithm": "de",
+        "population_size": 5,
+        "generations": 3,
+        "convergence": {
+          "initial_fitness": 0.5102,
+          "final_fitness": 0.6932,
+          "improvement": 0.1830
+        }
+      },
+      "stress_diet": {
+        "config": {
+          "embedding_dim": 64,
+          "num_heads": 4,
+          "transformer_dim": 96,
+          "dropout_rate": 0.2,
+          "output_dim": 64
+        },
+        "fitness": 0.7214,
+        "iterations": 15,
+        "algorithm": "de",
+        "population_size": 5,
+        "generations": 3,
+        "convergence": {
+          "initial_fitness": 0.5325,
+          "final_fitness": 0.7214,
+          "improvement": 0.1889
+        }
+      },
+      "physio": {
+        "config": {
+          "hidden_units": 96,
+          "activation": "relu",
+          "dropout_rate": 0.3,
+          "output_dim": 64
+        },
+        "fitness": 0.7542,
+        "iterations": 15,
+        "algorithm": "de",
+        "population_size": 5,
+        "generations": 3,
+        "convergence": {
+          "initial_fitness": 0.5621,
+          "final_fitness": 0.7542,
+          "improvement": 0.1921
+        }
+      }
+    },
+    "gating_phase": {
+      "config": {
+        "gate_hidden_size": 128,
+        "gate_top_k": 2,
+        "load_balance_coef": 0.05
+      },
+      "fitness": 0.8214,
+      "iterations": 15,
+      "algorithm": "pso",
+      "population_size": 5,
+      "generations": 3,
+      "convergence": {
+        "initial_fitness": 0.7325,
+        "final_fitness": 0.8214,
+        "improvement": 0.0889
+      },
+      "expert_weights": {
+        "sleep": 0.35,
+        "weather": 0.15,
+        "stress_diet": 0.25,
+        "physio": 0.25
+      }
+    },
+    "e2e_phase": {
+      "config": {
+        "learning_rate": 0.0025,
+        "batch_size": 64,
+        "l2_regularization": 0.01
+      },
+      "fitness": {
+        "auc": 0.9325,
+        "latency": 12.45
+      },
+      "iterations": 15,
+      "algorithm": "nsga2",
+      "population_size": 5,
+      "generations": 3,
+      "convergence": {
+        "initial_fitness": {
+          "auc": 0.8214,
+          "latency": 18.72
+        },
+        "final_fitness": {
+          "auc": 0.9325,
+          "latency": 12.45
+        },
+        "improvement": {
+          "auc": 0.1111,
+          "latency": 6.27
+        }
+      },
+      "pareto_front": [
+        {
+          "learning_rate": 0.0025,
+          "batch_size": 64,
+          "l2_regularization": 0.01,
+          "auc": 0.9325,
+          "latency": 12.45
+        },
+        {
+          "learning_rate": 0.0015,
+          "batch_size": 32,
+          "l2_regularization": 0.02,
+          "auc": 0.9125,
+          "latency": 10.21
+        },
+        {
+          "learning_rate": 0.0035,
+          "batch_size": 128,
+          "l2_regularization": 0.005,
+          "auc": 0.9425,
+          "latency": 15.78
+        }
+      ]
+    }
+  }
+}

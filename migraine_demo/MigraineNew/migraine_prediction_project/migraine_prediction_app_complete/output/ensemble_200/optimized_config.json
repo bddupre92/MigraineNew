@@ -1,0 +1,45 @@
+{
+    "test_size": 0.2,
+    "val_size": 0.2,
+    "sequence_length": 7,
+    "batch_size": 32,
+    "epochs": 50,
+    "learning_rate": 0.0005,
+    "early_stopping_patience": 15,
+    "load_balance_coef": 0.005,
+    "l2_regularization": 0.0001,
+    "dropout_rate": 0.3,
+    "class_weight": {
+        "0": 1.0,
+        "1": 2.0
+    },
+    "focal_loss_gamma": 2.0,
+    "high_risk_threshold": 0.6,
+    "expert_configs": [
+        {
+            "conv_filters": 96,
+            "kernel_size": 5,
+            "lstm_units": 192,
+            "dropout_rate": 0.3,
+            "output_dim": 96
+        },
+        {
+            "hidden_units": 192,
+            "activation": "elu",
+            "dropout_rate": 0.3,
+            "output_dim": 96
+        },
+        {
+            "embedding_dim": 96,
+            "num_heads": 6,
+            "transformer_dim": 96,
+            "dropout_rate": 0.3,
+            "output_dim": 96
+        }
+    ],
+    "gating_config": {
+        "gate_hidden_size": 192,
+        "gate_top_k": 3,
+        "load_balance_coef": 0.005
+    }
+}

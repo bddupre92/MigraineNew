@@ -1,0 +1,57 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8510
+  Network URL: http://169.254.0.21:8510
+  External URL: http://34.48.74.172:8510
+
+2025-04-19 18:53:11.734236: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 18:53:11.741794: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 18:53:11.762417: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745103191.796025   59646 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745103191.806502   59646 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745103191.833967   59646 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103191.834032   59646 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103191.834041   59646 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103191.834046   59646 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-19 18:53:11.842357: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mcomparison_dashboard.py[0m:73 in <module>                     [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m  70 [0m[2m│   │   │   [0m[96msuper[0m().[92m__init__[0m(**kwargs)                                        [31m [0m
+[31m [0m   [2m  71 [0m                                                                              [31m [0m
+[31m [0m   [2m  72 [0m[2m# Set page configuration[0m                                                      [31m [0m
+[31m [0m [31m❱ [0m  73 st.set_page_config(                                                           [31m [0m
+[31m [0m   [2m  74 [0m[2m│   [0mpage_title=[33m"[0m[33mMigraine Prediction Model Comparison[0m[33m"[0m,                        [31m [0m
+[31m [0m   [2m  75 [0m[2m│   [0mpage_icon=[33m"[0m[33m🧠[0m[33m"[0m,                                                           [31m [0m
+[31m [0m   [2m  76 [0m[2m│   [0mlayout=[33m"[0m[33mwide[0m[33m"[0m,                                                            [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/[0m[1mmetrics_util.py[0m:410 in     [31m [0m
+[31m [0m wrapped_func                                                                         [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/commands/[0m[1mpage_config.py[0m:273 in     [31m [0m
+[31m [0m set_page_config                                                                      [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner_utils/[0m[1mscript_[0m [31m [0m
+[31m [0m [1mrun_context.py[0m:183 in enqueue                                                        [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mStreamlitSetPageConfigMustBeFirstCommandError: [0m`[1;35mset_page_config[0m[1m([0m[1m)[0m` can only be called 
+once per app page, and must be called as the first Streamlit command in your script.
+
+For more information refer to the 
+[1m[[0mdocs[1m][0m[1m([0m[4;94mhttps://docs.streamlit.io/develop/api-reference/configuration/st.set_page_config[0m[4;94m)[0m
+[4;94m.[0m
+  Stopping...

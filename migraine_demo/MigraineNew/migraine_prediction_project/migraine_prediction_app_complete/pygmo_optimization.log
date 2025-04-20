@@ -1,0 +1,43 @@
+2025-04-19 19:06:29.899843: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 19:06:29.906172: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 19:06:29.923578: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745103989.952009   61415 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745103989.960918   61415 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745103989.984071   61415 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103989.984137   61415 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103989.984147   61415 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745103989.984153   61415 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-19 19:06:29.990926: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+=== Migraine Prediction Model - Full PyGMO Optimization and Training ===
+Timestamp: 2025-04-19 19:06:35
+Loaded training data: 700 samples
+Loaded validation data: 99 samples
+Sleep data shape: (700, 7, 6)
+Weather data shape: (700, 4)
+Stress/Diet data shape: (700, 7, 6)
+PyGMO Optimizer initialized with data from /home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/data
+Optimization results will be saved to /home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/output
+
+Starting Full Three-Phase Optimization...
+
+=== Starting Full Three-Phase Optimization ===
+Timestamp: 2025-04-19 19:06:35
+
+=== Phase 1: Expert Hyperparameter Optimization ===
+
+Optimizing Sleep Expert...
+Traceback (most recent call last):
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/run_pygmo_optimization.py", line 314, in <module>
+    main()
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/run_pygmo_optimization.py", line 61, in main
+    expert_configs, gating_config, e2e_config = optimizer.run_full_optimization(
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/model/pygmo_optimizer.py", line 409, in run_full_optimization
+    expert_configs = self.optimize_experts(
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/model/pygmo_optimizer.py", line 182, in optimize_experts
+    sleep_config, sleep_fitness = sleep_optimizer.optimize(
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/model/moe_architecture/pygmo_integration.py", line 210, in optimize
+    prob = pg.problem(pg.fitness_wrapper(self.fitness, self.param_bounds))
+AttributeError: module 'pygmo' has no attribute 'fitness_wrapper'

@@ -1,0 +1,79 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://169.254.0.21:8502
+  External URL: http://34.48.74.172:8502
+
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:889 in <module>                    [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m886 [0m[2;33m│   │   [0m[33m"""[0m, unsafe_allow_html=[94mTrue[0m)                                           [31m [0m
+[31m [0m   [2m887 [0m                                                                               [31m [0m
+[31m [0m   [2m888 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                     [31m [0m
+[31m [0m [31m❱ [0m889 [2m│   [0mmain()                                                                     [31m [0m
+[31m [0m   [2m890 [0m                                                                               [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:791 in main                        [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m788 [0m[2m│   │   [0m                                                                       [31m [0m
+[31m [0m   [2m789 [0m[2m│   │   [0m[2m# Threshold analysis[0m                                                   [31m [0m
+[31m [0m   [2m790 [0m[2m│   │   [0mst.markdown([33m"[0m[33m<h3>Threshold Analysis</h3>[0m[33m"[0m, unsafe_allow_html=[94mTrue[0m)     [31m [0m
+[31m [0m [31m❱ [0m791 [2m│   │   [0mst.plotly_chart(plot_threshold_analysis(y_test, metrics[[33m'[0m[33my_pred_proba[0m[33m'[0m [31m [0m
+[31m [0m   [2m792 [0m[2m│   │   [0m                                                                       [31m [0m
+[31m [0m   [2m793 [0m[2m│   │   [0m[2m# Explanation[0m                                                          [31m [0m
+[31m [0m   [2m794 [0m[2m│   │   [0mst.markdown([33m"""[0m                                                        [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:431 in plot_threshold_analysis     [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m428 [0m[2m│   [0m                                                                           [31m [0m
+[31m [0m   [2m429 [0m[2m│   [0m[94mfor[0m threshold [95min[0m thresholds:                                               [31m [0m
+[31m [0m   [2m430 [0m[2m│   │   [0my_pred = (y_pred_proba >= threshold).astype([96mint[0m)                       [31m [0m
+[31m [0m [31m❱ [0m431 [2m│   │   [0mprecision = precision_score(y_true, y_pred)                            [31m [0m
+[31m [0m   [2m432 [0m[2m│   │   [0mrecall = recall_score(y_true, y_pred)                                  [31m [0m
+[31m [0m   [2m433 [0m[2m│   │   [0mf1 = f1_score(y_true, y_pred)                                          [31m [0m
+[31m [0m   [2m434 [0m                                                                               [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'precision_score'[0m is not defined
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:889 in <module>                    [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m886 [0m[2;33m│   │   [0m[33m"""[0m, unsafe_allow_html=[94mTrue[0m)                                           [31m [0m
+[31m [0m   [2m887 [0m                                                                               [31m [0m
+[31m [0m   [2m888 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                     [31m [0m
+[31m [0m [31m❱ [0m889 [2m│   [0mmain()                                                                     [31m [0m
+[31m [0m   [2m890 [0m                                                                               [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:846 in main                        [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m843 [0m[2m│   │   [0mst.markdown([33m"[0m[33m<h3>System Architecture</h3>[0m[33m"[0m, unsafe_allow_html=[94mTrue[0m)    [31m [0m
+[31m [0m   [2m844 [0m[2m│   │   [0m                                                                       [31m [0m
+[31m [0m   [2m845 [0m[2m│   │   [0m[2m# Create a simple architecture diagram[0m                                 [31m [0m
+[31m [0m [31m❱ [0m846 [2m│   │   [0m[94mfrom[0m[90m [0m[4;96mgraphviz[0m[90m [0m[94mimport[0m Digraph                                           [31m [0m
+[31m [0m   [2m847 [0m[2m│   │   [0m                                                                       [31m [0m
+[31m [0m   [2m848 [0m[2m│   │   [0m[2m# Create a graphviz diagram[0m                                            [31m [0m
+[31m [0m   [2m849 [0m[2m│   │   [0mdot = Digraph()                                                        [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mModuleNotFoundError: [0mNo module named [32m'graphviz'[0m
+  Stopping...

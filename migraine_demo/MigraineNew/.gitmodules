@@ -1,0 +1,6 @@
+[submodule "migraine_prediction_project/synthea"]
+	path = migraine_prediction_project/synthea
+	url = https://github.com/synthetichealth/synthea.git
+[submodule "migraine_prediction_project/FuseMoE"]
+	path = migraine_prediction_project/FuseMoE
+	url = https://github.com/aaronhan223/FuseMoE.git

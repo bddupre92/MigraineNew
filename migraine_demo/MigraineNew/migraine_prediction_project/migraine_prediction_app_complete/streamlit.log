@@ -1,0 +1,115 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8505
+  Network URL: http://169.254.0.21:8505
+  External URL: http://34.48.74.172:8505
+
+2025-04-19 14:45:19.374722: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 14:45:19.383676: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 14:45:19.405203: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745088319.440117   28195 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745088319.450522   28195 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745088319.479378   28195 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745088319.479471   28195 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745088319.479482   28195 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745088319.479487   28195 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-19 14:45:19.489052: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-04-19 14:45:23.450149: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+/usr/local/lib/python3.10/dist-packages/keras/src/models/functional.py:238: UserWarning:
+
+The structure of `inputs` doesn't match the expected structure.
+Expected: input_layer
+Received: inputs=['Tensor(shape=(52, 7, 6))', 'Tensor(shape=(52, 4))', 'Tensor(shape=(52, 7, 6))']
+
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:1026 in <module>                    [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m1023 [0m                                                                              [31m [0m
+[31m [0m   [2m1024 [0m                                                                              [31m [0m
+[31m [0m   [2m1025 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                    [31m [0m
+[31m [0m [31m❱ [0m1026 [2m│   [0mmain()                                                                    [31m [0m
+[31m [0m   [2m1027 [0m                                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:981 in main                         [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 978 [0m[2m│   │   [0mst.write([33m"[0m[33mInput current data points to get a next-day migraine predic[0m [31m [0m
+[31m [0m   [2m 979 [0m[2m│   │   [0mst.info([33m"[0m[33mThis uses the loaded model. Ensure the input features match [0m [31m [0m
+[31m [0m   [2m 980 [0m[2m│   │   [0m                                                                      [31m [0m
+[31m [0m [31m❱ [0m 981 [2m│   │   [0mcreate_prediction_interface(model, combined_data) [2m# Pass combined_dat[0m [31m [0m
+[31m [0m   [2m 982 [0m                                                                              [31m [0m
+[31m [0m   [2m 983 [0m[2m# --- Utility Functions for Prediction Interface (Example) ---[0m                [31m [0m
+[31m [0m   [2m 984 [0m                                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:530 in create_prediction_interface  [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 527 [0m[2m│   │   │   │   [0m[[96mint[0m(a) [94mfor[0m a [95min[0m alcohol] +                                   [31m [0m
+[31m [0m   [2m 528 [0m[2m│   │   │   │   [0m[[96mint[0m(c) [94mfor[0m c [95min[0m caffeine] +                                  [31m [0m
+[31m [0m   [2m 529 [0m[2m│   │   │   │   [0m[[96mint[0m(ch) [94mfor[0m ch [95min[0m chocolate]                                 [31m [0m
+[31m [0m [31m❱ [0m 530 [2m│   │   │   [0m]).reshape([94m1[0m, [94m7[0m, [94m3[0m)                                               [31m [0m
+[31m [0m   [2m 531 [0m[2m│   │   │   [0m                                                                  [31m [0m
+[31m [0m   [2m 532 [0m[2m│   │   │   [0m[2m# Normalize data (simple normalization for demo)[0m                  [31m [0m
+[31m [0m   [2m 533 [0m[2m│   │   │   [0msleep_data = (sleep_data - np.array([[94m7[0m, [94m5[0m])) / np.array([[94m2[0m, [94m2[0m])   [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mValueError: [0mcannot reshape array of size [1;36m28[0m into shape [1m([0m[1;36m1[0m,[1;36m7[0m,[1;36m3[0m[1m)[0m
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:1026 in <module>                    [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m1023 [0m                                                                              [31m [0m
+[31m [0m   [2m1024 [0m                                                                              [31m [0m
+[31m [0m   [2m1025 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                    [31m [0m
+[31m [0m [31m❱ [0m1026 [2m│   [0mmain()                                                                    [31m [0m
+[31m [0m   [2m1027 [0m                                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:981 in main                         [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 978 [0m[2m│   │   [0mst.write([33m"[0m[33mInput current data points to get a next-day migraine predic[0m [31m [0m
+[31m [0m   [2m 979 [0m[2m│   │   [0mst.info([33m"[0m[33mThis uses the loaded model. Ensure the input features match [0m [31m [0m
+[31m [0m   [2m 980 [0m[2m│   │   [0m                                                                      [31m [0m
+[31m [0m [31m❱ [0m 981 [2m│   │   [0mcreate_prediction_interface(model, combined_data) [2m# Pass combined_dat[0m [31m [0m
+[31m [0m   [2m 982 [0m                                                                              [31m [0m
+[31m [0m   [2m 983 [0m[2m# --- Utility Functions for Prediction Interface (Example) ---[0m                [31m [0m
+[31m [0m   [2m 984 [0m                                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1mstreamlit_dashboard.py[0m:530 in create_prediction_interface  [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 527 [0m[2m│   │   │   │   [0m[[96mint[0m(a) [94mfor[0m a [95min[0m alcohol] +                                   [31m [0m
+[31m [0m   [2m 528 [0m[2m│   │   │   │   [0m[[96mint[0m(c) [94mfor[0m c [95min[0m caffeine] +                                  [31m [0m
+[31m [0m   [2m 529 [0m[2m│   │   │   │   [0m[[96mint[0m(ch) [94mfor[0m ch [95min[0m chocolate]                                 [31m [0m
+[31m [0m [31m❱ [0m 530 [2m│   │   │   [0m]).reshape([94m1[0m, [94m7[0m, [94m3[0m)                                               [31m [0m
+[31m [0m   [2m 531 [0m[2m│   │   │   [0m                                                                  [31m [0m
+[31m [0m   [2m 532 [0m[2m│   │   │   [0m[2m# Normalize data (simple normalization for demo)[0m                  [31m [0m
+[31m [0m   [2m 533 [0m[2m│   │   │   [0msleep_data = (sleep_data - np.array([[94m7[0m, [94m5[0m])) / np.array([[94m2[0m, [94m2[0m])   [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mValueError: [0mcannot reshape array of size [1;36m28[0m into shape [1m([0m[1;36m1[0m,[1;36m7[0m,[1;36m3[0m[1m)[0m
+/usr/local/lib/python3.10/dist-packages/keras/src/models/functional.py:238: UserWarning:
+
+The structure of `inputs` doesn't match the expected structure.
+Expected: input_layer
+Received: inputs=['Tensor(shape=(52, 7, 6))', 'Tensor(shape=(52, 4))', 'Tensor(shape=(52, 7, 6))']
+
+  Stopping...

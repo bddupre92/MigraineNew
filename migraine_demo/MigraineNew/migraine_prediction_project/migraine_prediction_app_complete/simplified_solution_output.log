@@ -1,0 +1,38 @@
+2025-04-19 19:32:44.096214: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 19:32:44.102341: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2025-04-19 19:32:44.118963: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745105564.146770   65588 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745105564.155255   65588 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745105564.177606   65588 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745105564.177665   65588 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745105564.177675   65588 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745105564.177680   65588 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-19 19:32:44.184210: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+=== Starting Simplified Migraine Prediction Solution ===
+Loading data from output/data
+Train set: 2520 samples, positive ratio: 0.50
+Validation set: 200 samples, positive ratio: 0.10
+Test set: 400 samples, positive ratio: 0.10
+
+=== Preprocessing Data ===
+Preprocessed data shapes:
+X_train: (2520, 93), y_train: (2520,)
+X_val: (200, 93), y_val: (200,)
+X_test: (400, 93), y_test: (400,)
+Class weights: {0: 1.0, 1: np.float64(1.0)}
+Traceback (most recent call last):
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/simplified_solution.py", line 661, in <module>
+    main()
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/simplified_solution.py", line 637, in main
+    model = create_baseline_model(X_train.shape[1])
+  File "/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_prediction_app_complete/simplified_solution.py", line 159, in create_baseline_model
+    model.add(layers.Input(shape=input_shape))
+  File "/usr/local/lib/python3.10/dist-packages/keras/src/layers/core/input_layer.py", line 209, in Input
+    layer = InputLayer(
+  File "/usr/local/lib/python3.10/dist-packages/keras/src/layers/core/input_layer.py", line 92, in __init__
+    shape = backend.standardize_shape(shape)
+  File "/usr/local/lib/python3.10/dist-packages/keras/src/backend/common/variables.py", line 562, in standardize_shape
+    raise ValueError(f"Cannot convert '{shape}' to a shape.")
+ValueError: Cannot convert '93' to a shape.

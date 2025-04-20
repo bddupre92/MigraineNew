@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  migraine-app:
+    build: .
+    ports:
+      - "8501:8501"  # Streamlit
+      - "8888:8888"  # Jupyter
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    command: streamlit  # Default to Streamlit, can be overridden
+
+  migraine-jupyter:
+    build: .
+    ports:
+      - "8889:8888"  # Different port to avoid conflict
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    command: jupyter

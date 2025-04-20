@@ -1,0 +1,50 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8504
+  Network URL: http://169.254.0.21:8504
+  External URL: http://34.48.74.172:8504
+
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:18 in <module>                     [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 15 [0m[94mfrom[0m[90m [0m[4;96msklearn[0m[4;96m.[0m[4;96mmodel_selection[0m[90m [0m[94mimport[0m train_test_split                           [31m [0m
+[31m [0m   [2m 16 [0m                                                                               [31m [0m
+[31m [0m   [2m 17 [0m[2m# Import expert dashboard component[0m                                            [31m [0m
+[31m [0m [31m❱ [0m 18 [94mfrom[0m[90m [0m[4;96mdashboard[0m[4;96m.[0m[4;96mexpert_dashboard[0m[90m [0m[94mimport[0m create_expert_dashboard                 [31m [0m
+[31m [0m   [2m 19 [0m                                                                               [31m [0m
+[31m [0m   [2m 20 [0m[2m# Set page configuration[0m                                                       [31m [0m
+[31m [0m   [2m 21 [0mst.set_page_config(                                                            [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mModuleNotFoundError: [0mNo module named [32m'dashboard'[0m
+[31m──[0m[31m────────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────────[0m[31m──[0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m: [31m [0m
+[31m [0m 121 in exec_func_with_error_handling                                                 [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner[0m [31m [0m
+[31m [0m [1m.py[0m:640 in code_to_exec                                                              [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m [2m/home/ubuntu/migraine_demo/MigraineNew/migraine_prediction_project/migraine_predicti[0m [31m [0m
+[31m [0m [2mon_app_complete/dashboard/[0m[1msimplified_dashboard.py[0m:18 in <module>                     [31m [0m
+[31m [0m                                                                                      [31m [0m
+[31m [0m   [2m 15 [0m[94mfrom[0m[90m [0m[4;96msklearn[0m[4;96m.[0m[4;96mmodel_selection[0m[90m [0m[94mimport[0m train_test_split                           [31m [0m
+[31m [0m   [2m 16 [0m                                                                               [31m [0m
+[31m [0m   [2m 17 [0m[2m# Import expert dashboard component[0m                                            [31m [0m
+[31m [0m [31m❱ [0m 18 [94mfrom[0m[90m [0m[4;96mdashboard[0m[4;96m.[0m[4;96mexpert_dashboard[0m[90m [0m[94mimport[0m create_expert_dashboard                 [31m [0m
+[31m [0m   [2m 19 [0m                                                                               [31m [0m
+[31m [0m   [2m 20 [0m[2m# Set page configuration[0m                                                       [31m [0m
+[31m [0m   [2m 21 [0mst.set_page_config(                                                            [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mModuleNotFoundError: [0mNo module named [32m'dashboard'[0m
+  Stopping...
