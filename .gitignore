@@ -5,4 +5,5 @@ cat > .gitignore << 'EOF'
 # But not these files/directories
 !.gitignore
 !migraine_prediction_app/
+!migrine_demo/MigraineNew
 EOF
