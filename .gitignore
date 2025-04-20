@@ -1,20 +1,8 @@
+cat > .gitignore << 'EOF'
 # Ignore everything
 *
 
-# But not these directories
-!migraine_demo/
-!migraine_prediction_app/
-
-# Don't ignore .gitignore itself
+# But not these files/directories
 !.gitignore
-data/
-output/
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.DS_Store
-.vscode/
-*.h5
-*.csv
+!migraine_prediction_app/
+EOF
